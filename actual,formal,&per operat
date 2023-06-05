@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int add(int a, int b=2){
+    // here 2 is default value of parameter
+    return (a+b);
+}
+
+int changeValue(int &z){
+    z=100;
+    return z;
+}
+int main(){
+    int a=5;
+    cout<<add(2,3)<<endl;
+    cout<<changeValue(a)<<endl;
+    cout<<a<<endl; //& operator assing the same value for same address with two differnt name of varriable
+    
+    int p=4;
+    int &q=p;
+    cout<<q<<endl;
+    cout<<&q<<endl;
+    cout<<&p<<endl;
+    return 0;
+}
